@@ -1,0 +1,12 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: 127.0.0.1
+    database_port: null
+    database_name: my_quizz
+    database_user: root
+    database_password:
+    mailer_transport: smtp
+    mailer_host: smtp.yopmail.com
+    mailer_user: mdrpol@yopmail.com
+    mailer_encryption: tls
+    secret: 68204d34436089c5ee5e1549121619a65b2a9221

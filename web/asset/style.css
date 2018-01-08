@@ -1,0 +1,28 @@
+body{
+	background-color:#C4E9E4;
+}
+#container{
+	text-align:center;
+	border:solid black 10px;
+}
+#catego{
+	width:250px; 
+	height:250px; 
+	text-align:center;
+	margin:50px;
+	border:solid rgba(0, 0, 0, 0.3) 15px;
+	border-radius: 5px;
+}
+header nav ul li a{
+
+	list-style:none;
+	text-decoration:none;
+	background-color:black;
+	color:white;
+}
+header nav ul li{
+	display:inline-block;
+}
+#tabdbo{
+	border: 1px solid black;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="{{asset('asset/style.css')}}">
+	<title>symph</title>
+</head>
+<body>
+		<header>
+		<nav>
+			<ul>
+				<li>
+					<a href="/register">S'inscrire</a>
+				</li>
+				<li>
+					<a href="/login"> Se connecter</a>
+				</li>
+				<li>
+					<a href="/profile/change-password">Update mdp</a>
+				</li>
+				<li>
+					<a href="/resetting/request">Update email</a>
+				</li>
+				<li>
+					<a href="/profile">Mon compte</a>
+				</li>
+				{% if is_granted('ROLE_USER') %}
+				<li>
+					<a href="/logout">Se déconnecter</a>
+				</li>
+				{% endif %}
+			</ul>
+
+		</nav>
+	</header>
+	<h1> Question </h1>
+	<div id="container">
+		<form method="POST" action="/checkChoice">
+			<h2> Montrer nous vos connaissances</h2>
+			{% for question in questions %}
+				<h3>{{ question.question }}</h3>
+				{% for choice in choices %}
+					{% if question.id == choice.id_question %}
+						<input type="radio" id="{{choice.id}}" name="{{question.id}}" value="{{choice.reponse}}">
+						<label for="{{choice.id}}">{{ choice.reponse }}</label>
+					{% endif %}
+				{% endfor %}
+			{% endfor %}
+			<br><br>
+			  <button type="submit">Envoyer</button>
+		</form>
+	</div>
+</body>
+</html>

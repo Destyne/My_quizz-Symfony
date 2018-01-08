@@ -1,0 +1,4 @@
+wac_quizz_homepage:
+    path:     /
+    defaults: { _controller: WACQuizzBundle:Default:index }
+

@@ -1,0 +1,4 @@
+services:
+#    wac_quizz.example:
+#        class: WAC\QuizzBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
